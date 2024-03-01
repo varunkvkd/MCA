@@ -1,0 +1,104 @@
+mysql> create database college;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use college;
+Database changed
+mysql> create table awh(Id int,Name varchar(20),Age int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into awh values(1,'Abhay',22);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(2,'Abhinand',21);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into awh values(3,'Salah',24);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(3,'Ajisa',22);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from awh;
++------+----------+------+
+| Id   | Name     | Age  |
++------+----------+------+
+|    1 | Abhay    |   22 |
+|    2 | Abhinand |   21 |
+|    3 | Salah    |   24 |
+|    3 | Ajisa    |   22 |
++------+----------+------+
+4 rows in set (0.00 sec)
+
+mysql> update awh set Id=4 where Name='Ajisa';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from awh;
++------+----------+------+
+| Id   | Name     | Age  |
++------+----------+------+
+|    1 | Abhay    |   22 |
+|    2 | Abhinand |   21 |
+|    3 | Salah    |   24 |
+|    4 | Ajisa    |   22 |
++------+----------+------+
+4 rows in set (0.00 sec)
+
+mysql> insert into awh values(5,'Akash',23);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(6,'Akshay',23);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(7,'Amaldas',23);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(8,'Anagha',23);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into awh values(9,'Arjun',23);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(10,'Ashitha',23);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into awh values(11,'Ashwin',24);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from awh;
++------+----------+------+
+| Id   | Name     | Age  |
++------+----------+------+
+|    1 | Abhay    |   22 |
+|    2 | Abhinand |   21 |
+|    3 | Salah    |   24 |
+|    4 | Ajisa    |   22 |
+|    5 | Akash    |   23 |
+|    6 | Akshay   |   23 |
+|    7 | Amaldas  |   23 |
+|    8 | Anagha   |   23 |
+|    9 | Arjun    |   23 |
+|   10 | Ashitha  |   23 |
+|   11 | Ashwin   |   24 |
++------+----------+------+
+11 rows in set (0.00 sec)
+
+mysql> delete from awh where Name='Arjun';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from awh;
++------+----------+------+
+| Id   | Name     | Age  |
++------+----------+------+
+|    1 | Abhay    |   22 |
+|    2 | Abhinand |   21 |
+|    3 | Salah    |   24 |
+|    4 | Ajisa    |   22 |
+|    5 | Akash    |   23 |
+|    6 | Akshay   |   23 |
+|    7 | Amaldas  |   23 |
+|    8 | Anagha   |   23 |
+|   10 | Ashitha  |   23 |
+|   11 | Ashwin   |   24 |
++------+----------+------+
+10 rows in set (0.00 sec)
